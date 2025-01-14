@@ -1,0 +1,54 @@
+<resources>
+
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!--<item name="colorPrimary">@color/green_what_second</item>
+        <item name="colorPrimaryDark">@color/green_what</item>
+        <item name="colorAccent">@color/orange_text</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>-->
+        <item name="colorPrimary">#01875F</item>
+        <item name="colorPrimaryDark">#01563D</item>
+        <!--Checkbox选中颜色-->
+        <item name="colorAccent">#01875F</item>
+
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <!--解决全屏的时候底部content和导航栏之间有一根白线的现象-->
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <!--状态栏文字黑色-->
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+
+        <item name="android:navigationBarColor">@color/bg_main</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+        <!--<item name="android:windowLightNavigationBar" tools:ignore="NewApi">@android:color/white</item>-->
+
+        <!--Dialog message颜色-->
+        <item name="android:textColorPrimary">@color/black_text_comfortable</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle.textColor</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle.textColor</item>
+
+        <item name="backgroundColor">@color/bg_main</item>
+    </style>
+
+    <style name="PositiveButtonStyle.textColor" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/orange_text</item>
+    </style>
+
+    <style name="NegativeButtonStyle.textColor" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/gray_text_hint</item>
+    </style>
+
+    <style name="FullTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="backgroundColor">@color/bg_main</item>
+        <item name="android:navigationBarColor">@color/bg_main</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+    </style>
+</resources>

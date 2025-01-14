@@ -1,0 +1,96 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    // 支持Kotlin注解，使用DataBinding要使用这个
+    //id 'kotlin-kapt'
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace 'is.xyz.mpv'
+    compileSdk libs.versions.targetSdk.get().toInteger()
+
+    defaultConfig {
+        applicationId "com.itant.jtv.mpv"
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.targetSdk.get().toInteger()
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        viewBinding = true
+        // 如果代码包含用kotlin写的@BindAdapter，必须引入kapt。为了完全移除kapt，需要使用Java来实现@BindAdapter
+        dataBinding = true
+        buildConfig = true
+    }
+
+    signingConfigs {
+        config {
+            storeFile file('google.jks')
+            storePassword "Away6899458"
+            keyAlias "mm"
+            keyPassword "Away6899458"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField("String", "BASE_URL", '"http://www.shuiliu520.com/wuji/"')
+        }
+        release {
+            signingConfig signingConfigs.config
+            // 是否可调试
+            debuggable false
+            // 开启混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // 打的aar包里会含有一个混淆文件，apk打包时该混淆文件会自动引用
+            //buildConfigField("String", "BASE_URL", '"http://erp.blueasiainfo.com:19291/"')
+
+            buildConfigField("String", "BASE_URL", '"http://www.shuiliu520.com/wuji/"')
+        }
+    }
+
+    // 设置apk文件名
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "jtv_v${defaultConfig.versionName}.apk"
+            switch (variant.getName()) {
+                case "debug":
+                    outputFileName = "jtv_debug_v${defaultConfig.versionName}.apk"
+                    break
+                case "release":
+                    outputFileName = "jtv_realease_v${defaultConfig.versionName}.apk"
+                    break
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    api(project(":lib-base"))
+    implementation 'androidx.media:media:1.7.0'
+    //api(project(":lib-mpv"))
+    // 使用的版本：v0.38.0-772 https://github.com/mpv-android/mpv-android/releases/tag/2024-09-15
+}

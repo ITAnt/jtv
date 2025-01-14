@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/aas_8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/rbVideo"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_widget"
+                android:foreground="@null"
+                android:button="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:minWidth="@dimen/aas_80dp"
+                android:paddingVertical="@dimen/aas_8dp"
+                android:text="视源设置"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/aas_12sp" />
+
+            <RadioButton
+                android:id="@+id/rbTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:foreground="@null"
+                android:button="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:minWidth="@dimen/aas_80dp"
+                android:paddingVertical="@dimen/aas_8dp"
+                android:text="使用说明"
+                android:textColor="@color/color_text"
+                android:textSize="@dimen/aas_12sp" />
+        </RadioGroup>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/cbForceUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="刷新"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp"
+                    android:visibility="gone"/>
+
+                <CheckBox
+                    android:id="@+id/cbGreenMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="绿色"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <CheckBox
+                    android:id="@+id/cbCombineChannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="多源"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp"
+                    android:visibility="gone"/>
+
+                <CheckBox
+                    android:id="@+id/cbAutoLaunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="自启"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp"
+                    android:visibility="gone"/>
+
+                <CheckBox
+                    android:id="@+id/cbIpv4Only"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="IPV4"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <CheckBox
+                    android:id="@+id/cbHardCodec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="硬解"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <CheckBox
+                    android:id="@+id/cbCacheEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="缓存"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp"
+                    android:visibility="gone"/>
+
+                <CheckBox
+                    android:id="@+id/cbChannelSort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/color_text_channel"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="排序"
+                    android:textColor="@color/color_text_channel"
+                    android:textSize="@dimen/aas_10sp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/aas_16dp">
+
+        <include
+            android:id="@+id/includeVideo"
+            layout="@layout/include_setting_video" />
+
+        <include
+            android:id="@+id/includeTips"
+            layout="@layout/include_setting_tips"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

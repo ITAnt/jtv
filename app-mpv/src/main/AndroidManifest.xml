@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <application
+        android:name="com.itant.jtv.mpv.TvApplication"
+        android:appCategory="video"
+        android:label="家视MPV"
+        tools:replace="android:label">
+        <activity
+            android:name="com.itant.jtv.mpv.ui.home.video.VideoMpvActivity"
+            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|keyboardHidden|keyboard|uiMode"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullTheme"
+            android:exported="false" />
+
+        <!--<activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/FilePickerTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <!--<activity
+            android:name=".FilePickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@style/FilePickerThemeSpecial"
+            android:exported="false" />
+
+        <activity
+            android:name=".config.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/FilePickerThemeLegacy" />-->
+
+        <service
+            android:name="is.xyz.mpv.BackgroundPlaybackService"
+            android:foregroundServiceType="mediaPlayback"
+            android:exported="false" />
+
+        <receiver android:name="is.xyz.mpv.NotificationButtonReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="is.xyz.mpv.PLAY_PAUSE" />
+                <action android:name="is.xyz.mpv.ACTION_PREV" />
+                <action android:name="is.xyz.mpv.ACTION_NEXT" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

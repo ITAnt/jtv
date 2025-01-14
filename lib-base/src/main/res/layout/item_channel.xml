@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <RadioButton
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:foreground="@null"
+            android:background="@null"
+            android:gravity="start"
+            android:textAllCaps="false"
+            android:padding="@dimen/aas_4dp"
+            android:button="@null"
+            android:minHeight="0dp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="@color/color_text_channel"
+            android:textSize="@dimen/aas_8sp" />
+
+        <ImageView
+            android:id="@+id/ivStar"
+            android:layout_width="@dimen/aas_9dp"
+            android:layout_height="@dimen/aas_9dp"
+            android:src="@drawable/ic_star"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/aas_2dp"
+            app:tint="@color/yellow" />
+    </LinearLayout>
+</layout>

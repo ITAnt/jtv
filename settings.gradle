@@ -1,0 +1,37 @@
+pluginManagement {
+    repositories {
+        //google()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// all
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal{url "file://E://maven/local/repository/" }
+        maven { url "https://jitpack.io" }
+        google()
+        mavenCentral()
+        maven { url "https://maven.aliyun.com/repository/public" }
+    }
+}
+
+rootProject.name = "JTV"
+include ':lib-base'
+include ':lib-mpv'
+include ':lib-ijk'
+include ':lib-ksy'
+include ':app-ksy'
+include ':app-mpv'
+include ':app-ijk'
+include ':app-exo'
+include ':app-vlc'

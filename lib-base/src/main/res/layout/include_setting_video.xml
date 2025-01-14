@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_widget_iptv"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="请输入发布的视频源分享地址"
+        android:padding="@dimen/aas_6dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="@color/gray_text_hint"
+        android:textSize="@dimen/aas_10sp"
+        android:inputType="textUri"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/aas_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_widget_iptv"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:paddingVertical="@dimen/aas_6dp"
+            android:text="开始获取"
+            android:textColor="@color/white"
+            android:textSize="@dimen/aas_10sp"
+            android:textStyle="normal"
+            android:nextFocusDown="@+id/cbForceUpdate"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIptv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="@dimen/aas_8dp"
+        android:nestedScrollingEnabled="false"/>
+</LinearLayout>

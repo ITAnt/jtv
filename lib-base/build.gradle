@@ -1,0 +1,110 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    // 支持Kotlin注解，使用DataBinding要使用这个
+    //id 'kotlin-kapt'
+    alias(libs.plugins.ksp)
+}
+
+android {
+    namespace 'com.itant.jtv'
+    compileSdk libs.versions.targetSdk.get().toInteger()
+
+    defaultConfig {
+        minSdk libs.versions.minSdk.get().toInteger()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        viewBinding = true
+        // 如果代码包含用kotlin写的@BindAdapter，必须引入kapt。为了完全移除kapt，需要使用Java来实现@BindAdapter
+        dataBinding = true
+        buildConfig = true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", '"http://www.shuiliu520.com/wuji/"')
+        }
+        release {
+            // 是否可调试
+            debuggable false
+            // 开启混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // 打的aar包里会含有一个混淆文件，apk打包时该混淆文件会自动引用
+            //buildConfigField("String", "BASE_URL", '"http://erp.blueasiainfo.com:19291/"')
+            buildConfigField("String", "BASE_URL", '"http://www.shuiliu520.com/wuji/"')
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs = ["-Xstring-concat=inline"]
+    }
+}
+
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+
+    // kotlin
+    api(libs.storage.sp.ktx)
+    api(libs.performance.lifecycle)
+
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api(libs.androidx.core.ktx)
+    api(libs.androidx.appcompat)
+    api(libs.google.material)
+
+    // 解决 Cannot access 'androidx.activity.FullyDrawnReporterOwner
+    api(libs.androidx.activity.ktx)
+
+    // 网络请求
+    api(libs.net.retrofit)
+
+    // 衔接 retrofit 和 gson
+    api(libs.net.retrofit.converter)
+    api(libs.utils.gson)
+
+    // 打印网络请求日志框架
+    api(libs.net.log)
+
+    // 内存泄漏检测
+    debugImplementation(libs.performance.leakcanary)
+
+    // 通知栏显示请求，兼容 targetSdkVersion 31
+    debugApi(libs.net.chucker.debug)
+    releaseApi(libs.net.chucker.release)
+
+    // 工具
+    api(libs.utils.utilcodex)
+
+    // 适配器
+    api(libs.ui.recyclerview.adapter)
+
+    // RecyclerView
+    //implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // MMKV
+    implementation(libs.storage.mmkv)
+
+    // Glide加载图片
+    //api(libs.ui.image.glide)
+
+    //api project(path: ':lib:mvvm')
+    // 在线库
+    api 'com.github.ITAnt:mvvm:1.0.8'
+
+    //implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+
+    implementation 'com.tencent.bugly:crashreport:4.1.9.3'
+}

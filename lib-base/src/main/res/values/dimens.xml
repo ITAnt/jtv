@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="aas_8sp">16sp</dimen>
+    <dimen name="aas_10sp">20sp</dimen>
+    <dimen name="aas_11sp">22sp</dimen>
+    <dimen name="aas_12sp">24sp</dimen>
+    <dimen name="aas_16sp">32sp</dimen>
+    <dimen name="aas_1dp">2dp</dimen>
+    <dimen name="aas_1_1dp">2.2dp</dimen>
+    <dimen name="aas_1_5dp">3dp</dimen>
+    <dimen name="aas_2dp">4dp</dimen>
+    <dimen name="aas_4dp">8dp</dimen>
+    <dimen name="aas_6dp">12dp</dimen>
+    <dimen name="aas_8dp">16dp</dimen>
+    <dimen name="aas_9dp">18dp</dimen>
+    <dimen name="aas_16dp">32dp</dimen>
+    <dimen name="aas_32dp">64dp</dimen>
+    <dimen name="aas_35dp">70dp</dimen>
+    <dimen name="aas_55dp">110dp</dimen>
+    <dimen name="aas_64dp">128dp</dimen>
+    <dimen name="aas_80dp">160dp</dimen>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true">
+
+    <tv.danmaku.ijk.custom.TvVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:playerBackgroundColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <!--左侧-->
+        <View
+            android:id="@+id/viewLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"/>
+        <!--中间-->
+        <View
+            android:id="@+id/viewCenter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"/>
+        <!--右侧-->
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="false"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewChannel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChannel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:paddingHorizontal="@dimen/aas_8dp"
+            android:nestedScrollingEnabled="false"
+            android:background="@color/white_transparent_video1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewIptv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/aas_8dp"
+            android:paddingTop="@dimen/aas_8dp"
+            android:background="@color/bg_main">
+
+            <android.widget.Button
+                android:id="@+id/rbRefreshIptv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/aas_6dp"
+                android:background="@drawable/selector_widget_iptv"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:button="@null"
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:minHeight="0dp"
+                android:padding="@dimen/aas_6dp"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_channel"
+                android:textSize="@dimen/aas_10sp"
+                android:text="刷新IPTV源" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIptv"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

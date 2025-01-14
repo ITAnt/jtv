@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="编写视频源"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="左边是名称，中间是英文逗号，右边是IPTV源链接，如果有多个视频源，则直接回车，按上面的格式填写第二个视频源。如：\n某某频道,http://www.xxx.com/tv.m3u8"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="发布视频源"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="把内容发布到任意一个写文章的平台上，得到文章的分享链接，确保链接能分享，且查看网页源码能看到视频源内容。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tipsSetVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="设置视频源"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="切换到APP的【视源设置】，填写并该分享链接并点击【开始获取】，解析成功会有相应提示。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="查看频道列表"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="在观看视频直播的过程中，点击左方向键即可调出频道列表。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="切换视频比例"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="在观看视频的过程中，双击中间按键即可切换视频比例，切换顺序为：默认-16:9-4:3-填充"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="切换频道"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="可以在调出频道列表的时候，选中并点击确定按键，切换到选中的频道，也可以在观看视频时，按向上/下按键切换上/下一个频道。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="收藏频道"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="在播放收藏的频道视频过程中，点击中间确定键，即可取消收藏。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="查看节目单"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="在播放视频的过程中，短按中间按钮，即可调出当前频道的节目单。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aas_8dp"
+                android:background="@drawable/selector_widget"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/aas_8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="切换频道源"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/aas_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aas_2dp"
+                    android:focusable="false"
+                    android:gravity="start"
+                    android:text="在观看视频的过程中，双击右键即可切换当前频道视频源（需要开启多源模式且该频道有多个视频源）。"
+                    android:textColor="@color/bg_selected"
+                    android:textSize="@dimen/aas_8sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

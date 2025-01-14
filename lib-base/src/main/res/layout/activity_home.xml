@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/aas_16dp">
+
+    <android.widget.Button
+        android:id="@+id/btnLive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/aas_64dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_widget"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:text="直播"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/aas_16sp" />
+
+    <android.widget.Button
+        android:id="@+id/btnStar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/aas_64dp"
+        android:layout_marginStart="@dimen/aas_16dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_widget"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:text="收藏"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/aas_16sp" />
+
+    <android.widget.Button
+        android:id="@+id/btnSetting"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/aas_64dp"
+        android:layout_marginStart="@dimen/aas_16dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_widget"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:text="设置"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/aas_16sp" />
+
+
+</LinearLayout>
