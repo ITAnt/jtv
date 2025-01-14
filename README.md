@@ -1,4 +1,4 @@
-![截图](https://github.com/ITAnt/jtv/blob/main/screenshot/1.jpg)
+![截图](screenshot/1.jpg)
 ![截图](https://github.com/ITAnt/jtv/blob/main/screenshot/2.jpg)
 ![截图](https://github.com/ITAnt/jtv/blob/main/screenshot/3.jpg)
 
