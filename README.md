@@ -1,6 +1,6 @@
-![截图1](screenshot/1.jpg)
-![截图2](screenshot/2.jpg)
-![截图3](screenshot/3.jpg)
+![截图](https://github.com/ITAnt/jtv/blob/main/screenshot/1.jpg)
+![截图](https://github.com/ITAnt/jtv/blob/main/screenshot/2.jpg)
+![截图](https://github.com/ITAnt/jtv/blob/main/screenshot/3.jpg)
 
 电视越来越智能，但家里老人看电视越来越困难，电视家倒闭后，甚至连我这个业内人士都不知道如何收看电视直播了。探索一番后，发现现有的TV直播软件都做得太复杂了（不是不好，而是功能太多了，比如我的电视以及一些列衍生出来的APP），其实电视直播最核心的功能就是视频播放器+视频源。所以本项目大删特删，不考虑字幕、点播、快进快退、节目单等复杂功能，专注于提供直播播放、收藏功能，考虑到当前视频源失效的速度之快，以方便用户切换视频源为出发点，综合市场上热门的开源/闭源播放器，写了这个直播项目。本项目用到了开源/闭源共5个播放器，每个播放器都有自己的优缺点，可以自行选择下载使用，以下是各自特点：
 
